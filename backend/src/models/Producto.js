@@ -1,7 +1,7 @@
 const { DataTypes, UUIDV4 } = require("sequelize");
 
 module.exports = (sequelize) => {
-  sequelize.define("Producto", {
+const producto = sequelize.define("Producto", {
     id_producto: {
       type: DataTypes.UUID,
       primaryKey: true,
@@ -25,4 +25,5 @@ module.exports = (sequelize) => {
         allowNull: true,
       }
   });
+  return producto;
 };
