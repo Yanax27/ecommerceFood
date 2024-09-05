@@ -2,7 +2,7 @@ const { DataTypes, UUIDV4 } = require('sequelize');
 
 module.exports = (sequelize) => {
   // Define el modelo 'Categoria'
-  const Categoria = sequelize.define('Categoria', {
+  sequelize.define('Categoria', {
     id_categoria: {
       type: DataTypes.UUID,
       primaryKey: true,
@@ -19,6 +19,5 @@ module.exports = (sequelize) => {
     }
   });
 
-  // Devuelve el modelo para que pueda ser utilizado en otras partes de la aplicación
-  return Categoria;
+
 };

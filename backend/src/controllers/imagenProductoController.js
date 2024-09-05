@@ -1,9 +1,6 @@
 const { uploadImage } = require('../services/imgBBservices'); // Importa el servicio para ImgBB
-const { Sequelize } = require("sequelize");
-const sequelize = new Sequelize('ecommerce', 'postgres', 'admin', {
-    dialect: 'postgres', // o el dialecto que estés utilizando
-  });
-const ImagenProducto = require('../models/ImagenProducto')(sequelize);
+const { ImagenProducto } = require("../db");
+
 
 // Maneja la subida de imágenes
 const uploadImageHandler = async (req, res) => {
