@@ -15,9 +15,9 @@ class ProductoService {
     }
 
     async getproductoByNombre(nombre, productoModel) {
-        const producto = await productoDao.getproductoByNombre(nombre, productoModel);
+        const producto = await ProductoDao.getProductoByNombre(nombre, productoModel);
         if (!producto) {
-            throw new ClientError('Categoría no encontrada', 404);
+            throw new ClientError('Producto no encontrada', 404);
         }
         return producto;
     }
